@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat-Massege - Wddk | ودك</title>
+  <!-- ========= favicon icon ========= -->
+  <link rel="icon" type="image/png" href="assets/Images/favicon-img.png">
+  <!-- ========= Custom css link ========= -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- ========= Font-Awesome ========= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ========= SwiperJs CSS ========= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <div class="account-container">
+    <!-- #####>> navbar-mobile <<##### -->
+    <div class="arrow-container">
+      <a href="massege-list.html">
+        <div class="arrow-backpage">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+      </a>
+    </div>
+    <h1>Message</h1>
+    <div class="chat-container">
+      <div class="messages">
+      </div>
+      <div class="input-area">
+        <input type="text" id="message-input" placeholder="Type Message">
+        <button id="send-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" viewBox="0 0 30 50" fill="none">
+            <path
+              d="M3.77365 49.5912C3.13365 49.4012 2.61367 49.0412 2.16367 48.5612C1.74367 48.1112 1.29362 47.7013 0.863619 47.2613C-0.246381 46.1113 -0.286376 44.5913 0.743624 43.3813C0.883624 43.2213 1.03369 43.0712 1.18369 42.9312C7.00369 37.1112 12.8136 31.3012 18.6336 25.4812C19.3936 24.7212 19.3936 24.9213 18.6136 24.1413C12.7836 18.3113 6.96363 12.4812 1.12363 6.66122C0.403629 5.94122 -0.0563274 5.14127 0.0436726 4.08127C0.113673 3.40127 0.413629 2.85126 0.873629 2.38126C1.34363 1.90126 1.82369 1.42125 2.31369 0.941254C3.59369 -0.308746 5.20373 -0.318746 6.47373 0.941254C9.40373 3.85125 12.3136 6.78126 15.2336 9.70126C19.5236 13.9913 23.8137 18.2813 28.1037 22.5713C29.5837 24.0513 29.5937 25.6013 28.1037 27.0813C20.9837 34.2013 13.8636 41.3113 6.75363 48.4413C6.24363 48.9513 5.70364 49.3912 5.01364 49.6112H3.75363L3.77365 49.5912Z"
+              fill="url(#paint0_linear_632_1364)" />
+            <defs>
+              <linearGradient id="paint0_linear_632_1364" x1="0.00362151" y1="24.7812" x2="29.2237" y2="24.7812"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffff" />
+                <stop offset="1" stop-color="#ffff" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- #####>> navbar-mobile <<##### -->
+    <div class="mobile-style-navbar">
+      <ul class="navbar-mobile">
+        <a href="index.html">
+          <li class="nav-item-mobile active">
+            <div class="icon-item-mobile"><i class="fa-solid fa-house"></i></div>
+            <span>Home</span>
+          </li>
+        </a>
+        <a href="categories.html">
+          <li class="nav-item-mobile">
+            <div class="icon-item-mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <span>Search</span>
+          </li>
+        </a>
+        <a href="booked.html">
+          <li class="nav-item-mobile">
+            <div class="icon-item-mobile"><i class="fa-regular fa-calendar-check"></i></div>
+            <span>Booking</span>
+          </li>
+        </a>
+        <a href="favorite.html">
+          <li class="nav-item-mobile">
+            <div class="icon-item-mobile"><i class="fa-regular fa-heart"></i></div>
+            <span>Favorites</span>
+          </li>
+        </a>
+        <a href="account.html">
+          <li class="nav-item-mobile">
+            <div class="icon-item-mobile"><i class="fa-regular fa-user"></i></div>
+            <span>Account</span>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+    <!-- SwiperJs Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/javaScript/main.js"></script>
+    <script src="assets/javaScript/second.js"></script>
+    <script src="assets/javaScript/theme-mood.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const messageInput = document.getElementById("message-input");
+        const sendButton = document.getElementById("send-button");
+        const messagesContainer = document.querySelector(".messages");
+
+        function loadMessages() {
+          const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+          storedMessages.forEach((messageText) => {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message", "sent");
+            messageElement.textContent = messageText;
+            messagesContainer.appendChild(messageElement);
+          });
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function saveMessage(messageText) {
+          const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+          storedMessages.push(messageText);
+          localStorage.setItem("messages", JSON.stringify(storedMessages));
+        }
+
+        function sendMessage() {
+          const messageText = messageInput.value.trim();
+          if (messageText === "") return;
+
+          const messageElement = document.createElement("div");
+          messageElement.classList.add("message", "sent");
+          messageElement.textContent = messageText;
+
+          messagesContainer.appendChild(messageElement);
+
+          saveMessage(messageText);
+
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+          messageInput.value = "";
+        }
+
+        sendButton.addEventListener("click", sendMessage);
+
+        messageInput.addEventListener("keydown", (event) => {
+          if (event.key === "Enter") {
+            sendMessage();
+          }
+        });
+
+        loadMessages();
+      });
+
+    </script>
+</body>
+</html>

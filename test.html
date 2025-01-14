@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    :root{
+        --primary-color-dark: #009994;
+        --primary-color-light: #00dda8;
+        --gradient-color: linear-gradient(90deg, var(--primary-color-dark) 0%, var(--primary-color-light) 100%);
+    }
+    header {
+      background-color: var(--primary-color-dark);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .btn {
+      padding: 15px;
+      background: var(--gradient-color);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Available Pages</h1>
+    <p>Click on any page to navigate</p>
+  </header>
+  <div class="container">
+    <div class="grid">
+      <a href="account.html" class="btn">Account</a>
+      <a href="booked.html" class="btn">Booked</a>
+      <a href="booking.html" class="btn">Booking</a>
+      <a href="bookingDetails.html" class="btn">Booking Details</a>
+      <a href="categories.html" class="btn">Categories</a>
+      <a href="chat-massge.html" class="btn">Chat Message</a>
+      <a href="createAccount.html" class="btn">Create Account</a>
+      <a href="favorite.html" class="btn">Favorite</a>
+      <a href="index.html" class="btn">Index</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="massege-list.html" class="btn">Message List</a>
+      <a href="not-found.html" class="btn">Not Found</a>
+      <a href="overview.html" class="btn">Overview</a>
+      <a href="pending-payment.html" class="btn">Pending Payment</a>
+      <a href="privacy.html" class="btn">Privacy</a>
+      <a href="profile.html" class="btn">Profile</a>
+      <a href="restaurant-details.html" class="btn">Restaurant Details</a>
+      <a href="restaurant-details2.html" class="btn">Restaurant Details 2</a>
+      <a href="restaurant-details3.html" class="btn">Restaurant Details 3</a>
+      <a href="setting.html" class="btn">Setting</a>
+      <a href="userNameLogin.html" class="btn">Username Login</a>
+      <a href="verifyPhoneNumber.html" class="btn">Verify Phone Number</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Wddk | ودك</title>
+    <!-- ========= favicon icon ========= -->
+    <link rel="icon" type="image/png" href="assets/Images/favicon-img.png">
+    <!-- ========= Custom css link ========= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ========= Font-Awesome ========= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ========= SwiperJs CSS ========= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body >
+    <div class="page-wrapper">
+        <div class="account-container">
+            <div class="arrow-container">
+                <a href="account.html">
+                    <div class="arrow-backpage">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+            </div>
+            <h1>Settings</h1>
+            <ul class="sidebar-menu-list">
+                <a href="#" class="profile-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/aboutus.svg" class="icon-settings about" alt="">
+                            <h4> About Wddk </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <a href="#" class="booking-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/privacy.svg" class="icon-settings" alt="">
+                            <h4> Privacy and Usage Policy </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <a href="#" class="messages-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/faq.svg" class="icon-settings" alt="">
+                            <h4> FAQs </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <a href="#" class="reviews-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/support.svg" class="icon-settings" alt="">
+                            <h4> Support </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <a href="#" class="settings-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/share-link.svg" class="icon-settings" alt="">
+                            <h4> Share App </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <a href="#" class="settings-user Language">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/language.svg" class="icon-settings" alt="">
+                            <h4> Language </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+                <div href="#" class="settings-user theme-mood">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/theme-mood.svg" class="icon-settings" alt="">
+                            <h4> Theme Mood </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </div>
+                <a href="#" class="settings-user">
+                    <li>
+                        <div class="sidebar-menu-item">
+                            <img src="assets/Images/logout.svg" class="icon-settings" alt="">
+                            <h4> Logout </h4>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <!-- #####>> navbar-mobile <<##### -->
+        <div class="mobile-style-navbar">
+            <ul class="navbar-mobile">
+                <a href="index.html">
+                    <li class="nav-item-mobile active">
+                        <div class="icon-item-mobile"><i class="fa-solid fa-house"></i></div>
+                        <span>Home</span>
+                    </li>
+                </a>
+                <a href="categories.html">
+                    <li class="nav-item-mobile">
+                        <div class="icon-item-mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <span>Search</span>
+                    </li>
+                </a>
+                <a href="booked.html">
+                    <li class="nav-item-mobile">
+                        <div class="icon-item-mobile"><i class="fa-regular fa-calendar-check"></i></div>
+                        <span>Booking</span>
+                    </li>
+                </a>
+                <a href="favorite.html">
+                    <li class="nav-item-mobile">
+                        <div class="icon-item-mobile"><i class="fa-regular fa-heart"></i></div>
+                        <span>Favorites</span>
+                    </li>
+                </a>
+                <a href="account.html">
+                    <li class="nav-item-mobile">
+                        <div class="icon-item-mobile"><i class="fa-regular fa-user"></i></div>
+                        <span>Account</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="popup-overlay" id="popup-overlay">
+            <div class="popup" id="popup">
+                <h2>Theme Mood</h2>
+                <div class="btn-theme-container">
+                    <div class="dark">
+                        <input type="radio" id="theme-dark" name="theme-mood" value="dark">
+                        <label for="theme-dark" class="btn-theme">Dark</label>
+                    </div>
+                    <div class="light">
+                        <input type="radio" id="theme-light" name="theme-mood" value="light" checked>
+                        <label for="theme-light" class="btn-theme">Light</label>
+                    </div>
+                </div>
+        </div>
+       </div>
+        <div class="popup-overlay" id="popup-overlay-lang">
+            <div class="popup" id="popup-lang">
+                <h2>Language</h2>
+                <div class="btn-theme-container">
+                    <div class="dark">
+                        <input type="radio" id="lang-en" name="language" value="english" checked>
+                        <label for="lang-en" class="btn-theme">English</label>
+                    </div>
+                    <div class="light">
+                        <input type="radio" id="lang-ar" name="language" value="arabic" >
+                        <label for="lang-ar" class="btn-theme">العربية</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SwiperJs Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/javaScript/main.js"></script>
+    <script src="assets/javaScript/second.js"></script>
+    <script src="assets/javaScript/theme-mood.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const popupOverlay = document.getElementById("popup-overlay");
+            const popup = document.getElementById("popup");
+            const themeMood = document.querySelector(".theme-mood");
+            const mobileStyleNavbar = document.querySelector(".mobile-style-navbar");
+                        themeMood.addEventListener("click", () => {
+                popupOverlay.style.display = "flex";
+                mobileStyleNavbar.style.display = "none";
+            });
+            popupOverlay.addEventListener("click", (event) => {
+                if (!popup.contains(event.target)) {
+                    popupOverlay.style.display = "none";
+                    mobileStyleNavbar.style.display = "block";
+                }
+            });
+        });
+        
+        const language = document.querySelector(".Language");
+        const popupOverlaylang = document.getElementById("popup-overlay-lang");
+        const popuplang = document.getElementById("popup-lang");
+        const mobileStyleNavbarTwo = document.querySelector(".mobile-style-navbar");
+        language.addEventListener("click", () => {
+            popupOverlaylang.style.display = "flex";
+            mobileStyleNavbarTwo.style.display = "none";
+        });
+        popupOverlaylang.addEventListener("click", (event) => {
+            if (!popuplang.contains(event.target)) {
+                popupOverlaylang.style.display = "none";
+                mobileStyleNavbarTwo.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
